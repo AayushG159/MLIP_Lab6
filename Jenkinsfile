@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         PROJECT_PATH = '''/mnt/d/UIC/Spring 25/CS 594 - Responsible AI Engr/Lab/07/MLIP_Lab6'''
-        VENV_PATH = "${PROJECT_PATH}/mlip/bin/activate"
+        VENV_PATH = "${PROJECT_PATH}/venv/bin/activate"
     }
 
     stages {
