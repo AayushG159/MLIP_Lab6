@@ -28,7 +28,7 @@ pipeline {
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
                 pytest -v "${PROJECT_PATH}"
 
-                // echo 'pytest not runned'
+                # echo 'pytest not runned'
                 exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
