@@ -1,6 +1,11 @@
 pipeline {
     agent any
 
+    environment {
+        PROJECT_PATH = '''/mnt/d/UIC/Spring 25/CS 594 - Responsible AI Engr/Lab/07/MLIP_Lab6'''
+        VENV_PATH = "${PROJECT_PATH}/mlip/bin/activate"
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -17,11 +22,13 @@ pipeline {
 
                 # TODO fill out the path to conda here
                 # sudo /PATH/TO/CONDA init
+                source "${VENV_PATH}"
 
                 # TODO Complete the command to run pytest
                 # sudo /PATH/TO/CONDA run -n <Envinronment Name> <Command you want to run>
+                pytest -v "${PROJECT_PATH}"
 
-                echo 'pytest not runned'
+                // echo 'pytest not runned'
                 exit 1 #comment this line after implementing Jenkinsfile
                 '''
 
